@@ -1,0 +1,13 @@
+.img-preview {
+    object-fit: contain;
+    height: 150px;
+    max-width: 200px;
+}
+
+.a-col {
+    color: black;
+}
+
+.scroll{
+    overflow-x: scroll;
+}

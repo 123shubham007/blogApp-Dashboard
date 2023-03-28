@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "blogapp-8f27e"
+  },
+  "targets": {
+    "blogapp-8f27e": {
+      "hosting": {
+        "blogApp-Dashboard": [
+          "blogapp-8f27e"
+        ],
+        "angularBlogDashboard": [
+          "blog-dashboard-app"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 bg-secondary-theme p-5 shadow-effect">
+            <h3 class="text-center text-theme-primary"> {{formStatus}} Categories</h3>
+            <p class="text-center mb-5"> You can add New Category from here . . .</p>
+
+            <form class="form-inline text-center" #categoryForm='ngForm' (ngSubmit)="onSubmit(categoryForm)">
+                <div class="form-group col-md-10">
+                    <input type="text" name="category" class="form-control shadow-effect" placeholder="Add new Category"
+                        #newCategory='ngModel' [(ngModel)]="formCategory" required
+                        [ngClass]="{ 'is-invalid':newCategory.touched && newCategory.invalid }">
+                    <div class="alert alert-danger" *ngIf="newCategory.touched && newCategory.invalid">
+                        Category field is required...
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-info btn-block mb-3 btn-theme" [disabled]="categoryForm.invalid">
+                        {{formStatus}} Category</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row my-5 justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-effect">
+                <div class="card-body">
+                    <table class="table row-border hover">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Category</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let category of categoryArray; let i = index">
+                                <td> {{ i+1 }} </td>
+                                <td> {{ category.category }} </td>
+                                <td>
+                                    <i class="fas fa-pencil-alt mx-2 pointer" (click)="onEdit(category.category, category.id)"></i>
+                                    <i class="fas fa-trash-alt mx-2 pointer" (click)="onDelete(category.id)"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
