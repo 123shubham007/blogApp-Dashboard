@@ -1,4 +1,4 @@
-preview - https://blogapp-8f27e.web.app/
+preview - https://blogapp-dashboard.web.app/login
 (link will not work after 1st Aug)
 
 change the eviroment of the project with your firebase enviroment
