@@ -1,3 +1,8 @@
+preview - https://blogapp-dashboard.web.app/login
+(link will not work after 1st Aug)
+
+change the eviroment of the project with your firebase enviroment
+
 # BlogAppDashboard
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
